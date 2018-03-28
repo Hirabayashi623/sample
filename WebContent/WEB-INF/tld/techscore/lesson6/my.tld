@@ -26,6 +26,17 @@
 		</attribute>
 	</tag>
 
+	<tag>
+		<name>sample3</name>
+		<tag-class>techscore.lesson6.MyTag6_3</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
 <!-- ***************** サンプル *********************************
 	<tag>
 		<name>タグ名</name>

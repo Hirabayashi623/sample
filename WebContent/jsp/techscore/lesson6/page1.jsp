@@ -10,5 +10,10 @@
 	<sample:sample1>Body</sample:sample1>
 
 	<sample:sample2 message="Message">Body</sample:sample2>
+
+	<% request.setAttribute("test1", "test"); %>
+	<% session.setAttribute("test2", "test"); %>
+	<sample:sample3 name="test1" />
+	<sample:sample3 name="test2" />
 </body>
 </html>
