@@ -1,4 +1,4 @@
-package techscore.lesson3_2;
+package techscore.lesson3;
 
 public class AnimalBean {
 	private String name;

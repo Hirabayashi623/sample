@@ -1,5 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8" %>
-<%@ taglib uri="/WEB-INF/tld/helloWorldTag.tld" prefix="example" %>
+<%@ taglib uri="/WEB-INF/tld/techscore/lesson5/helloWorldTag.tld" prefix="example" %>
 
 <html>
 <head>

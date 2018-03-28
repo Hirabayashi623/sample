@@ -1,4 +1,4 @@
-package techscore.lesson5_2;
+package techscore.lesson5;
 
 import java.io.IOException;
 
@@ -6,9 +6,14 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.Tag;
 
-public class HelloWorldTag implements Tag{
-	private Tag parentTag = null;
-	private PageContext pageContext = null;
+public class HelloWorldTag implements Tag {
+	protected Tag parentTag = null;
+	protected PageContext pageContext = null;
+
+	@Override
+	public int doStartTag() throws JspException {
+		return SKIP_BODY; // ボディ部を評価しない
+	}
 
 	@Override
 	public int doEndTag() throws JspException {
@@ -23,18 +28,13 @@ public class HelloWorldTag implements Tag{
 	}
 
 	@Override
-	public int doStartTag() throws JspException {
-		return SKIP_BODY;		// ボディ部を評価しない
-	}
-
-	@Override
 	public Tag getParent() {
 		return parentTag;
 	}
 
 	@Override
-	public void release() {
-		// 実装不要
+	public void setParent(Tag parentTag) {
+		this.parentTag = parentTag;
 	}
 
 	@Override
@@ -43,8 +43,8 @@ public class HelloWorldTag implements Tag{
 	}
 
 	@Override
-	public void setParent(Tag parentTag) {
-		this.parentTag = parentTag;
+	public void release() {
+		// 実装不要
 	}
 
 }
